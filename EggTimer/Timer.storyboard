@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Timer View Controller-->
+        <scene sceneID="oEr-EC-3aL">
+            <objects>
+                <viewController storyboardIdentifier="TimerViewController" id="OAG-Rh-bNO" customClass="TimerViewController" customModule="EggTimer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PW4-DA-m6M">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZgI-pT-66A">
+                                <rect key="frame" x="62.666666666666657" y="153" width="249.99999999999997" height="250"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4NM-fH-WwT">
+                                        <rect key="frame" x="45.333333333333343" y="89" width="159" height="72"/>
+                                        <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="50"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.88162869219999995" green="0.78617244959999999" blue="0.0083899842579999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="8dF-Qt-Mxa"/>
+                                    <constraint firstItem="4NM-fH-WwT" firstAttribute="top" secondItem="ZgI-pT-66A" secondAttribute="top" constant="89" id="BhX-p2-qnk"/>
+                                    <constraint firstItem="4NM-fH-WwT" firstAttribute="leading" secondItem="ZgI-pT-66A" secondAttribute="leading" constant="45.5" id="Ky7-8K-rNw"/>
+                                    <constraint firstAttribute="width" constant="250" id="Zvx-eg-9Hg"/>
+                                    <constraint firstAttribute="trailing" secondItem="4NM-fH-WwT" secondAttribute="trailing" constant="45.5" id="b6t-Q2-u0C"/>
+                                    <constraint firstAttribute="bottom" secondItem="4NM-fH-WwT" secondAttribute="bottom" constant="89" id="dXG-4Z-enP"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="448-IP-iFL">
+                                <rect key="frame" x="55" y="463" width="265" height="42"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="Piz-AE-TPL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="25"/>
+                                <state key="normal" title="START">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="startButtonClicked:" destination="OAG-Rh-bNO" eventType="touchUpInside" id="pjz-S3-Sll"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6dv-rr-pYp">
+                                <rect key="frame" x="55" y="524" width="123" height="42"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="1aa-q2-NEZ"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="42" id="IMI-kw-6Mz"/>
+                                    <constraint firstAttribute="width" constant="123" id="esd-5H-2j1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="25"/>
+                                <state key="normal" title="PAUSE">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="pauseButtonClicked:" destination="OAG-Rh-bNO" eventType="touchUpInside" id="rWF-nX-leB"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4N0-Mf-Luo">
+                                <rect key="frame" x="197" y="524" width="123" height="42"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="42" id="Eid-0q-0D5"/>
+                                    <constraint firstAttribute="height" constant="42" id="ucr-KY-vED"/>
+                                    <constraint firstAttribute="width" constant="123" id="vqj-kl-BuZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="25"/>
+                                <state key="normal" title="RESET">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="resetButtonClicked:" destination="OAG-Rh-bNO" eventType="touchUpInside" id="q24-9o-hoP"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.88162869219999995" green="0.78617244959999999" blue="0.0083899842579999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="vbi-Vs-xTs" firstAttribute="trailing" secondItem="448-IP-iFL" secondAttribute="trailing" constant="55" id="4wF-xa-SkW"/>
+                            <constraint firstItem="vbi-Vs-xTs" firstAttribute="trailing" secondItem="ZgI-pT-66A" secondAttribute="trailing" constant="62.5" id="6rc-he-qAe"/>
+                            <constraint firstItem="ZgI-pT-66A" firstAttribute="leading" secondItem="vbi-Vs-xTs" secondAttribute="leading" constant="62.5" id="Bnk-Ol-7VV"/>
+                            <constraint firstItem="ZgI-pT-66A" firstAttribute="top" secondItem="vbi-Vs-xTs" secondAttribute="top" constant="65" id="G2s-X2-Q6s"/>
+                            <constraint firstItem="vbi-Vs-xTs" firstAttribute="bottom" secondItem="6dv-rr-pYp" secondAttribute="bottom" constant="212" id="HNC-7E-B2d"/>
+                            <constraint firstItem="vbi-Vs-xTs" firstAttribute="bottom" secondItem="4N0-Mf-Luo" secondAttribute="bottom" constant="212" id="N5W-wv-xtk"/>
+                            <constraint firstItem="448-IP-iFL" firstAttribute="top" secondItem="ZgI-pT-66A" secondAttribute="bottom" constant="60" id="OFi-jj-GOt"/>
+                            <constraint firstItem="6dv-rr-pYp" firstAttribute="top" secondItem="448-IP-iFL" secondAttribute="bottom" constant="19" id="OuK-6d-zaY"/>
+                            <constraint firstItem="6dv-rr-pYp" firstAttribute="leading" secondItem="vbi-Vs-xTs" secondAttribute="leading" constant="55" id="Zeu-W1-qrV"/>
+                            <constraint firstItem="4N0-Mf-Luo" firstAttribute="leading" secondItem="6dv-rr-pYp" secondAttribute="trailing" constant="19" id="c3R-pg-aKt"/>
+                            <constraint firstItem="vbi-Vs-xTs" firstAttribute="trailing" secondItem="4N0-Mf-Luo" secondAttribute="trailing" constant="55" id="cDm-9K-gQP"/>
+                            <constraint firstItem="448-IP-iFL" firstAttribute="leading" secondItem="vbi-Vs-xTs" secondAttribute="leading" constant="55" id="mUI-Rn-LUS"/>
+                            <constraint firstItem="4N0-Mf-Luo" firstAttribute="top" secondItem="448-IP-iFL" secondAttribute="bottom" constant="19" id="wk0-5H-lTE"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="vbi-Vs-xTs"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="SuV-g7-vLK"/>
+                    <connections>
+                        <outlet property="circularTimerView" destination="ZgI-pT-66A" id="vnO-ee-PWr"/>
+                        <outlet property="pauseButton" destination="6dv-rr-pYp" id="CuC-c7-VD0"/>
+                        <outlet property="resetButton" destination="4N0-Mf-Luo" id="Dq4-CU-5Il"/>
+                        <outlet property="startButton" destination="448-IP-iFL" id="5Le-5d-zf3"/>
+                        <outlet property="timerLabel" destination="4NM-fH-WwT" id="ebt-Ep-Vkh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vfb-l9-eZ2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="757.60000000000002" y="-659.11330049261085"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="bPH-NR-lpP">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Uda-Tp-BxC" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" backIndicatorImage="eggImage" backIndicatorTransitionMaskImage="eggImage" id="WkU-Z4-Wfp">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="OAG-Rh-bNO" kind="relationship" relationship="rootViewController" id="TOc-BU-FzC"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bex-Jd-5iq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-63.200000000000003" y="-659.11330049261085"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="eggImage" width="1126" height="1100"/>
+    </resources>
+</document>

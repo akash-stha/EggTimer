@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uvd-Jb-cWF">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="EggTimer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b16-nV-KoU">
+                                <rect key="frame" x="51" y="630" width="273" height="50"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="gzJ-NM-ABf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="30"/>
+                                <state key="normal" title="Egg Timer">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="homeButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="H8w-bL-6Os"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello I'm an Egg Timer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i4s-Dw-Ahh">
+                                <rect key="frame" x="26.666666666666657" y="148" width="322" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="tC1-Ml-bIs"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="eggImage" translatesAutoresizingMaskIntoConstraints="NO" id="dDZ-kU-YoW">
+                                <rect key="frame" x="27" y="253" width="321" height="307"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.88162869219999995" green="0.78617244959999999" blue="0.0083899842579999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dDZ-kU-YoW" secondAttribute="trailing" constant="27" id="ATc-rr-jlE"/>
+                            <constraint firstItem="b16-nV-KoU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="51" id="Dst-tp-6Hh"/>
+                            <constraint firstItem="b16-nV-KoU" firstAttribute="top" secondItem="dDZ-kU-YoW" secondAttribute="bottom" constant="70" id="TxX-mO-R4i"/>
+                            <constraint firstItem="i4s-Dw-Ahh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="60" id="YsO-0V-ohW"/>
+                            <constraint firstItem="dDZ-kU-YoW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="27" id="hfI-H7-DwJ"/>
+                            <constraint firstItem="i4s-Dw-Ahh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="26.5" id="k0b-SM-U1N"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="b16-nV-KoU" secondAttribute="trailing" constant="51" id="kwb-0M-ZPX"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="b16-nV-KoU" secondAttribute="bottom" constant="98" id="t6E-aJ-pIs"/>
+                            <constraint firstItem="dDZ-kU-YoW" firstAttribute="top" secondItem="i4s-Dw-Ahh" secondAttribute="bottom" constant="60" id="wnx-Qt-McC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="i4s-Dw-Ahh" secondAttribute="trailing" constant="26.5" id="xTL-va-3jO"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="WDR-jz-gAs">
+                        <barButtonItem key="backBarButtonItem" title=" " id="JrT-jm-eqY"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="homeButton" destination="b16-nV-KoU" id="jJB-eT-YKA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="895" y="21"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="vke-na-GSY">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="uvd-Jb-cWF" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="sBc-EQ-00o">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Gxb-7j-z2q"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YFx-2R-B7k" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="48.799999999999997" y="20.689655172413794"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="eggImage" width="1126" height="1100"/>
+    </resources>
+</document>
